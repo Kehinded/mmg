@@ -1,0 +1,91 @@
+.dashboard-wrapper {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.dashboard-wrapper .sidebar-box {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 17%;
+          flex: 0 0 17%;
+  position: fixed;
+  width: 24rem;
+  top: 0%;
+  left: 0%;
+  background-color: var(--white-color);
+}
+
+@media only screen and (max-width: 50em) {
+  .dashboard-wrapper .sidebar-box {
+    position: absolute;
+    top: 10rem;
+    left: 0%;
+    z-index: 10;
+    width: 29rem;
+    -webkit-box-shadow: 0.1rem 0.1rem 8rem 0.1rem rgba(0, 0, 0, 0.05);
+            box-shadow: 0.1rem 0.1rem 8rem 0.1rem rgba(0, 0, 0, 0.05);
+    -webkit-transform: translateX(-120%);
+            transform: translateX(-120%);
+    -webkit-transition: all .5s;
+    transition: all .5s;
+  }
+}
+
+.dashboard-wrapper .main-content-box {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  width: calc(100vw - 24rem);
+}
+
+@media only screen and (max-width: 50em) {
+  .dashboard-wrapper .main-content-box {
+    width: 100vw;
+  }
+}
+
+.toggle-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem 3rem 0rem 3rem;
+  width: 100%;
+}
+
+.toggle-wrap .toggle-box {
+  width: 3rem;
+  height: 3rem;
+  cursor: pointer;
+}
+
+.toggle-wrap .toggle-box img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.toggle-wrap .logo-box {
+  margin: 0rem auto;
+}
+
+@media only screen and (min-width: 50em) {
+  .toggle-wrap {
+    display: none;
+  }
+}
+
+.translateX {
+  -webkit-transform: translateX(0%) !important;
+          transform: translateX(0%) !important;
+}
+/*# sourceMappingURL=DashboardLayout.css.map */

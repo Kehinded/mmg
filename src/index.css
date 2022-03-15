@@ -1,13 +1,58 @@
-body {
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto&display=swap');
+
+*,
+*::after,
+*::before {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: inherit;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --white-color: #ffffff;
+  --nav-color: #489494;
+  --nav-hover-color: #D7ECEC;
+  --background-color: #F3F5FC;
+  --logout-colour: #DB261B;
+  --card-title-color: #008080;
+  --text-color: #333333;
+  --text-light-color: #7d7987;
+  --text-font: 'Poppins', sans-serif;
+  --nav-font: 'Roboto', sans-serif;
+}
+
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.4rem;
+  color: var(--text-dark-color);
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(7rem, 1fr) [col-start] repeat(
+      8,
+      minmax(min-content, 16rem)
+    )
+    [col-end] minmax(7rem, 1fr) [full-end];
+  grid-template-rows: min-content;
+  font-family: var(--text-font);
+  overflow-x: hidden;
+  background-color: var(--background-color);
+  overscroll-behavior-y: none;
+}
+
+#root {
+  grid-column: full-start / full-end;
+  overflow-x: hidden;
+  background-color: var(--background-color);
+}
+
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 55%;
+  }
 }
